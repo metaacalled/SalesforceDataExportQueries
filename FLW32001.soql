@@ -1,0 +1,1 @@
+SELECT Id, SerialNumber, GT_HA_Implants__c, GT_EarSide__c, GT_HASide__c FROM Asset WHERE Account.GT_CustomerCode__c = 'xxxxxx' and GT_HA_Implants__c = 'Yes'

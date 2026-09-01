@@ -1,0 +1,1 @@
+SELECT AppointmentNumber, Status, SchedStartTime, SchedEndTime, GT_Source__c, GT_ServiceResource__r.Name FROM ServiceAppointment WHERE (not SchedStartTime = null) AND Account.Id = 'xxxxxxxxx' ORDER BY SchedStartTime DESC

@@ -1,0 +1,1 @@
+select Id, order.GT_Shop__r.name, GT_ProductSKU__c, Product2.Name, vlocity_cmt__SerialNumber__c from OrderItem where vlocity_cmt__SerialNumber__c = 'XX'

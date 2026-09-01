@@ -1,0 +1,1 @@
+SELECT Id, OldValue, NewValue, Field, CreatedDate, CreatedBy.Name, CreatedBy.Profile.Name FROM OrderHistory  WHERE Order.OrderNumber = '12269026' order by CreatedDate desc

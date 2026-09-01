@@ -1,0 +1,1 @@
+SELECT Id, Name, GT_Role__c, RelatedRecord.Name FROM ServiceResource WHERE RelatedRecord.Email = 'x@amplifon.com'

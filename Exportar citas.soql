@@ -1,0 +1,1 @@
+select Id, GT_AccountNameConcatenated__c, AppointmentNumber, SchedStartTime, SchedEndTime from ServiceAppointment where ServiceTerritoryID = '0Hn670000008bdXCAQ' and GT_ServiceResource__c= '0Hn670000008cTjCAI' and SchedStartTime >= today order by SchedStartTime

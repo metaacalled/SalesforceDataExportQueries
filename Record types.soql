@@ -1,0 +1,1 @@
+select Id, name from recordtype where ((not (name like '%GB')) and (not (name like '%BE')) and (not (name like '%DE'))) order by name asc

@@ -1,0 +1,1 @@
+SELECT Id, GT_Shop__r.Name, GT_Status__c FROM GT_InventoryCount__c WHERE GT_IsStarted__c = true AND GT_CountType__c = 'SHOP' 

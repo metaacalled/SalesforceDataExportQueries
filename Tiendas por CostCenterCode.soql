@@ -1,0 +1,1 @@
+SELECT Id, Name, GT_CostCenterCode__c, GT_ShopCode__c, IsActive, Street FROM ServiceTerritory WHERE GT_CostCenterCode__c IN ('SA155827', '')

@@ -1,0 +1,3 @@
+FIND {"número de empleado"}
+IN ALL FIELDS
+RETURNING GT_Integration_Log__c(Id, CreatedDate WHERE GT_Apex_Class__c = 'amplifonwebinterface_employees' ORDER BY CreatedDate DESC)

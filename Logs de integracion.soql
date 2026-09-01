@@ -1,0 +1,1 @@
+select Id, GT_Apex_Class__c, CreatedDate, GT_Status__c, GT_Source__c, GT_Destination__c, GT_Response_Code__c, CreatedBy.Name, GT_Response_Body__c from GT_Integration_Log__c where GT_EntityID__c = '801cl00000DARYzAAP' order by CreatedDate desc

@@ -1,0 +1,149 @@
+// Group 1
+
+SELECT 
+    GT_Order__r.OrderNumber,
+    GT_Order__r.GT_ShopCode__c,
+    GT_Order__r.GT_Shop__r.Name,
+    GT_Order__r.GT_StartDateRepair__c,
+    GT_Receiving__r.CreatedDate,
+    GT_Receiving__r.GT_ReceivingDate__c,
+    GT_Order__r.GT_RepairEndDate__c,
+    GT_Receiving__r.GT_ReceivingStatus__c,
+    GT_Order__r.GT_DeliveryRepair__c
+FROM 
+    GT_ReceivingItem__c
+WHERE 
+    GT_Order__r.Type = 'Repair'
+    AND GT_Receiving__r.GT_ReceivingDate__c >= 2026-07-09 
+    AND GT_Receiving__r.GT_ReceivingDate__c <= 2026-07-14  
+    AND GT_Order__r.GT_Shop__r.Name IN (
+        'BARCELONA - BALMES',
+        'VALENCIA - ESCULPTOR CAPUZ',
+        'BARCELONA - DE GUIPÚSCOA',
+        'BARCELONA - DIAGONAL',
+        'BARCELONA - GAUDI',
+        'BARCELONA - GRAN DE SANT ANDREU 2',
+        'BARCELONA - VIA JULIA',
+        'BARCELONA - DE FABRA I PUIG',
+        'VALENCIA - SAN AGUSTIN',
+        'BARCELONA - PERE IV',
+        'MISLATA - GREGORIO GEA 1',
+        'PUERTO DE SAGUNTO',
+        'VALENCIA - PEREZ GALDOS',
+        'RIBARROJA',
+        'SANT ADRIA DE BESOS',
+        'SAGUNTO',
+        'BARCELONA - CASP',
+        'VALENCIA - MANUEL CANDELA',
+        'VALENCIA - PRIMADO REIG 2',
+        'BURJASSOT',
+        'BARCELONA - SANT ANTONI Mª CLARET',
+        'BARCELONA - GRAN DE SANT ANDREU 1',
+        'VALENCIA - AUSIAS MARCH',
+        'BARCELONA - PI I MARGALL',
+        'MONCADA',
+        'VALENCIA - PRIMADO REIG 1',
+        'LA ELIANA',
+        'BARCELONA - GRAN DE GRACIA',
+        'VALENCIA - SERRERIA',
+        'VALENCIA - CARTEROS',
+        'VALENCIA - DEL CID',
+        'BENIMAMET',
+        'BARCELONA - MUNTANER',
+        'VALENCIA - RUZAFA',
+        'MASSAMAGRELL',
+        'VALENCIA - DR. PESET'
+    )
+    AND GT_Order__r.GT_CountryCode__c = '002'
+    AND GT_Order__r.Status NOT IN ('Cancelled', 'Draft')
+ORDER BY 
+    GT_Order__r.OrderNumber DESC
+
+// Group 2
+
+SELECT 
+    GT_Order__r.OrderNumber,
+    GT_Order__r.GT_ShopCode__c,
+    GT_Order__r.GT_Shop__r.Name,
+    GT_Order__r.GT_StartDateRepair__c,
+    GT_Receiving__r.CreatedDate,
+    GT_Receiving__r.GT_ReceivingDate__c,
+    GT_Order__r.GT_RepairEndDate__c,
+    GT_Receiving__r.GT_ReceivingStatus__c,
+    GT_Order__r.GT_DeliveryRepair__c
+FROM 
+    GT_ReceivingItem__c
+WHERE 
+    GT_Order__r.Type = 'Repair'
+    AND GT_Receiving__r.GT_ReceivingDate__c >= 2026-07-09 
+    AND GT_Receiving__r.GT_ReceivingDate__c <= 2026-07-14  
+    AND GT_Order__r.GT_Shop__r.Name IN (
+        'MADRID - NARVAEZ',
+        'MADRID - MARCELO USERA',
+        'MADRID - DEL MEDITERRANEO',
+        'MADRID - DELICIAS',
+        'MADRID - MARQUES DE URQUIJO',
+        'MADRID - JUAN DE MALASAÑA',
+        'MADRID - TOLEDO',
+        'MADRID - EXTREMADURA 2',
+        'MADRID - ANTONIO LOPEZ',
+        'MADRID - ALBERTO PALACIOS',
+        'MADRID - ILLESCAS',
+        'MOSTOLES - CONSTITUCIÓN',
+        'GETAFE - MADRID',
+        'GETAFE - JUAN DE LA CIERVA',
+        'MADRID - LA OCA',
+        'ALCORCON - MAYOR',
+        'PARLA',
+        'MOSTOLES - DOS DE MAYO',
+        'LEGANES - UNIVERSIDAD',
+        'FUENLABRADA - LEGANÉS 1',
+        'VALDEMORO',
+        'MADRID - EXTREMADURA 1',
+        'PINTO',
+        'LEGANES - CALLE JUAN MUÑOZ',
+        'ALCORCON - FUENLABRADA',
+        'MADRID - SAN DIEGO',
+        'MADRID - ALCALÁ 1',
+        'MADRID - DONOSTIARRA',
+        'MADRID - EMILIO FERRARI',
+        'MADRID - DE DON ANTONIO DE ANDRES',
+        'JEREZ DE LA FRONTERA - LANCERÍA',
+        'DOS HERMANAS - DEL EMIGRANTE',
+        'ALCALA DE GUADAIRA',
+        'JEREZ DE LA FRONTERA - PORVERA',
+        'DOS HERMANAS - ANTONIA DIAZ',
+        'MAIRENA DEL ALCOR',
+        'OSUNA',
+        'LOS PALACIOS Y VILLAFRANCA',
+        'EL PUERTO DE SANTA MARIA',
+        'CADIZ - BRASIL',
+        'SANLUCAR DE BARRAMEDA',
+        'SAN FERNANDO - ROSARIO',
+        'SAN FERNANDO - SAN RAFAEL',
+        'CHICLANA DE LA FRONTERA',
+        'ROTA',
+        'BARBATE',
+        'PUERTO REAL',
+        'GRANADA - DR. OLORIZ 1',
+        'ANTEQUERA',
+        'GRANADA - CARRERA DE LA VIRGEN 1',
+        'MALAGA - ALAMEDA DE COLON',
+        'MALAGA - COMPAÑÍA',
+        'MALAGA - JUAN SEBASTIAN ELCANO',
+        'GRANADA - RECOGIDAS',
+        'VELEZ-MALAGA - REYES CATOLICOS',
+        'VELEZ-MALAGA - VIVAR TÉLLEZ',
+        'MELILLA',
+        'GRANADA - DILAR',
+        'BAZA',
+        'GUADIX',
+        'MOTRIL',
+        'MALAGA - ALAMEDA PRINCIPAL 1',
+        'GRANADA - CARRERA DE LA VIRGEN 2',
+        'GRANADA - DR. OLORIZ 2'
+    )
+    AND GT_Order__r.GT_CountryCode__c = '002'
+    AND GT_Order__r.Status NOT IN ('Cancelled', 'Draft')
+ORDER BY 
+    GT_Order__r.OrderNumber DESC

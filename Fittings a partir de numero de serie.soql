@@ -1,0 +1,1 @@
+SELECT Name, GT_SN__c, GT_SKU__c,  GT_Account__r.Name FROM GT_Fitting__c  WHERE GT_SN__c IN ('2666405842','2666405852')

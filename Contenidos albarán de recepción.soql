@@ -1,0 +1,1 @@
+SELECT Id, GT_OriginalSerialNumber__c, GT_SerialNumber__c, Name, GT_ReceivingItemStatus__c, GT_Order__r.OrderNumber, GT_Order__r.Type FROM GT_ReceivingItem__c WHERE GT_Receiving__r.Name = 'R0XXXXX'

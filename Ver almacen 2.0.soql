@@ -1,0 +1,15 @@
+SELECT 
+    GT_Shop_Name__c,
+    Product2.GT_VendorName__c,
+    Product2.GT_AmplifonClassDesc__c,
+    Product2.GT_AmplifonSubclassDesc__c,
+    Product2.Name,
+    Product2.GT_ProductSKU__c,
+    SerialNumber,
+    Location.Name
+FROM ProductItem
+WHERE (NOT QuantityOnHand = 0)
+    AND (NOT ((GT_ProductItemParent__c = null) AND (GT_IsSerialized__c = true))) 
+    AND (NOT Location.Name LIKE '%SOLD')
+    AND (NOT Location.Name LIKE '%SHIPPED')
+    AND GT_Shop_Name__c LIKE '%MORATALAZ 1%'

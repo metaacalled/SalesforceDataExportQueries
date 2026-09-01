@@ -1,0 +1,5 @@
+SELECT OrderNumber, GT_Shop__r.Name, CreatedDate, Type, Status
+FROM Order
+WHERE GT_CourtesyHA__c = true AND Status IN ('Trial Delivered', 'Trial Accepted')
+ORDER BY CreatedDate DESC
+LIMIT 10

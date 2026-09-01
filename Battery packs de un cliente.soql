@@ -1,0 +1,1 @@
+SELECT Id, GT_AvailableUnits__c, GT_LeftUnits__c FROM Asset WHERE Name = 'Battery Pack' AND Account.GT_CustomerCode__c = '173000BV'
