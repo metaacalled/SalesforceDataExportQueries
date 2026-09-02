@@ -1,0 +1,27 @@
+SELECT
+    OrderNumber, 
+    Account.GT_CustomerCode__c, 
+    CreatedDate,
+    GT_StartDateRepair__c,
+    GT_Repair_Status__c, 
+    GT_Shop__r.Name, 
+    GT_Shop__r.GT_CatchmentAreaType__c,
+    GT_Shop__r.GT_RegionCode__c, 
+    GT_Shop__r.GT_AreaCode__c,
+    GT_Asset__r.SerialNumber, 
+    GT_Asset__r.GT_WarrantyStartDate__c,
+    GT_Asset__r.GT_WarrantyEndDate__c,
+    GT_TotalAmountToBePaid__c, 
+    GT_TotalAmountAlreadyPaid__c,
+    (SELECT GT_Receiving__r.GT_ReceivingDate__c FROM Receiving_Item__r)
+FROM 
+    Order 
+WHERE 
+    Type = 'Repair' 
+    AND GT_Repair_Status__c IN ('To Be Repaired', 'Sent to Supplier', 'Return') 
+    AND Status = 'Draft' 
+    AND GT_Shop__r.Country = 'Spain' 
+    AND (NOT GT_Shop__r.Name LIKE 'Ghost%')
+    AND DAY_ONLY(CreatedDate) < 2026-07-15
+ORDER BY CreatedDate DESC
+LIMIT 10
