@@ -1,0 +1,1 @@
+SELECT FIELDS(ALL) FROM GT_ReceivingItem__c WHERE GT_SerialNumber__c = 'xxxx' LIMIT 200
