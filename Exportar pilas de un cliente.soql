@@ -1,0 +1,10 @@
+SELECT 
+    Id, 
+    Name, 
+    PurchaseDate 
+FROM Asset 
+WHERE 
+    PurchaseDate >= 2023-12-07 
+    AND Account.Id = '0016700005kZMPfAAO' 
+    AND Name LIKE '%pila%'
+ORDER BY PurchaseDate DESC
