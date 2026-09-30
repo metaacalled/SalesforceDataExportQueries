@@ -1,0 +1,10 @@
+SELECT
+    Id,
+    Product_Name__c,
+    GT_ProductSKU__c,
+    vlocity_cmt__SerialNumber__c,
+    GT_OriginalListPriceVATIncluded__c,
+    GT_OneTimeVATPerc__c
+FROM OrderItem
+WHERE Order.OrderNumber = 'xxx'
+ORDER BY GT_OriginalListPriceVATIncluded__c DESC
