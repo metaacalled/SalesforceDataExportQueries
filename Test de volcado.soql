@@ -1,0 +1,15 @@
+SELECT
+    Id,
+    AppointmentNumber,
+    Account.Name,
+    SchedStartTime,
+    GT_Audiologist__c,
+    GT_ServiceResource__c,
+    LastModifiedBy.Name,
+    (SELECT Id, ServiceResourceId FROM ServiceResources)
+FROM ServiceAppointment
+WHERE ServiceTerritoryID IN ('0Hh670000004LenCAE')
+    AND GT_ServiceResource__c = '0Hncl0000009UA9CAM'
+    AND SchedStartTime = TODAY
+    AND SchedStartTime < 2599-01-01T00:00:00.000+0000
+ORDER BY SchedStartTime
