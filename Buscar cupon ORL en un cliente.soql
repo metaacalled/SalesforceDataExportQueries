@@ -1,0 +1,1 @@
+SELECT Id, Name, GT_Expiration_Date__c,  GT_Delivered_Date__c, GT_Notes__c, GT_Shop__r.Name, Doctor_Name__c FROM ENT_Coupon__c WHERE GT_Patient__r.GT_CustomerCode__c = '02669648' LIMIT 200
